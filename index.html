@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Jusqu'à Lausanne - miroir</title>
+  <title>Jusqu'à Lausanne</title>
    <style>
     @font-face {
       font-family: 'PoliceFr';
@@ -26,7 +26,16 @@
     .langue2 {
       font-family: 'PoliceAutre', monospace;
     }
-
+  #code {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      transform: scaleX(-1); /* reste lisible */
+      z-index: 999;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
     img {
       max-width: 100%;
       height: auto;
