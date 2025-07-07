@@ -18,21 +18,23 @@
     body {
       margin: 30px;
       transform: scaleX(-1);
-      background-color: #FFFFFF;
-      color: #222;
+      background-color: #000000;
+      color: #ffffff;
       font-family: 'PoliceFr', monospace;
+      white-space: pre-wrap;
       line-height: 1.6;
     }
 
     .langue2 {
       font-family: 'PoliceAutre', monospace;
     }
-  #code {
+  input {
       position: fixed;
-      top: 20px;
-      left: 20px;
-      transform: scaleX(-1); /* reste lisible */
-    }
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      transform: none;
+  }
     img {
       max-width: 100%;
       height: auto;
@@ -51,18 +53,13 @@
         font-size: 1rem;
       }
     }
-    #content {
-      margin-top: 60px;
     }
   </style>
 </head>
 <body>
-  <div id="code">
-  <label for="input">Code :</label>
-  <input id="input" type="text" oninput="checkCode(this.value)">
-   </div>
-  <div id="content">
-      <h1>JUSQU'A LAUSANNE</h1>
+   <input type="password" placeholder="Code ?" oninput="checkCode(this.value)">
+<p class="p2"><br></p>
+<h1>JUSQU'A LAUSANNE</h1>
 <p class="p1"><span class="s1">Zagreb, du 8 au 9 juin, 2025.</span></p>
 <p class="p2"><br></p>
 <p class="p1">C’est une ville résolument européenne. On y arrive en train, on y paie en euro. on y arrive comme à l’extrémité d’un mode musical; cette dernière note qui vient conclure la place harmonique dans laquelle on se trouve; ici le bon goût s’arrête. Ce n’est que par trace qu’on y a accès; un petit festival musical coloré, des cafés branchés, aucun regard déplacé. Tout est dans la retenue; on montre qu’on se tient bien, qu’on adhère, il y a même de la bière non filtrée, les affiches annoncent de grands noms internationaux - quel mélange de typique et de moderne à moindre coût! Et après?</p>
@@ -364,7 +361,6 @@ Jasmin fait quelques pas et on l’entend crier un peu plus loin; « Bober, kur
 <p class="p1">Aussitôt dit, aussitôt reparti. J’ouvre le petit cornet de papier. Avant de prendre ma première bouchée, je sens le soleil caresser mes lèvres et je souris. J’y retournerai rien que pour lui poser la question, encore une fois.</p>
 <p class="p2"><br></p>
 <img src="Artwork_balkanEx_13.png" alt="Artwork_balkanEx_13">
-  </div>
   <script>
     function checkCode(val) {
       if (val.toUpperCase() === 'IZINATA') {
